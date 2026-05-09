@@ -103,6 +103,7 @@ if (!$resultado) {
         section {
             margin-bottom: 3rem;
             padding-top: 60px; /* Compensar el nav fixed */
+            text-align=justify;
         }
 
         h2 {
