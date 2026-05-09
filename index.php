@@ -133,6 +133,59 @@ if (!$resultado) {
             margin: 0 10px;
             text-decoration: none;
         }
+        /* --- ESTILOS PARA LA TABLA --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden; /* Para que las esquinas redondeadas funcionen */
+}
+
+thead tr {
+    background-color: var(--primario); /* El color guinda #800020 */
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+th, td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #dddddd;
+}
+
+/* Color dorado para los encabezados al pasar el mouse */
+th {
+    border-bottom: 3px solid var(--secundario); /* El dorado #b8860b */
+}
+
+/* Efecto cebra: filas pares con un gris muy clarito */
+tbody tr:nth-of-type(even) {
+    background-color: var(--gris-claro);
+}
+
+/* Efecto hover: resaltar la fila cuando pasas el ratón */
+tbody tr:hover {
+    background-color: #f1f1f1;
+    transition: 0.3s;
+}
+
+/* Estilo para la última fila para que se vea más limpio */
+tbody tr:last-of-type {
+    border-bottom: 2px solid var(--primario);
+}
+
+/* Responsividad: si la pantalla es pequeña, permite scroll horizontal */
+@media (max-width: 600px) {
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+}
     </style>
 </head>
 <body>
@@ -248,9 +301,9 @@ Es el espacio ideal para los alumnos con mentalidad de "tiburones" o inventores.
             <h3>¿nuestra pagina te ayudo? </h3>
             <p>Envíanos en que te ayudo mas.</p>
             <form method="POST">
-                <label>opinion:</label>
+                <label>envianos:</label>
                 <input type="text" id="opinion" name="opinion" placeholder="escribe" required>
-                <button type="submit" name="enviar" class="btn-submit">Enviar Consulta</button>
+                <button type="submit" name="enviar" class="btn-submit">Enviar</button>
                 <?php
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
