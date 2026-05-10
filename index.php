@@ -215,10 +215,12 @@ tbody tr:last-of-type {
             <div class="programa-card">
                 <h3>SINATA (Tutorías)</h3>
                 <p>Sistema Nacional de Tutorías Académicas. Brindamos acompañamiento para fortalecer tu trayectoria escolar y evitar el rezago. Es una estrategia diseñada por la Subsecretaría de Educación Media Superior (SEMS) en México para apoyar a los estudiantes durante su bachillerato.</p>
+           <img src="cbto.jpg" alt="alumnos">
             </div>
             <div class="programa-card">
                 <h3>PRONAFOLE (Lectura)</h3>
                 <p>Programa Nacional de Fomento a la Lectura. Espacio dedicado a enriquecer el vocabulario y la comprensión lectora de la comunidad estudiantil. El PRONAFOLE es el Programa Nacional de Fomento a la Lectura. Es el "brazo literario" de la educación media superior y su misión es que los alumnos no solo lean por obligación, sino que aprendan a disfrutar y comprender lo que leen.</p>
+            <img src="pronafole.jpg" alt="fomento a la lectura">
             </div>
         </section>
 
@@ -228,11 +230,8 @@ tbody tr:last-of-type {
             <div class="programa-card">
                 <h3>FORMALASA</h3>
                 <p>El FORMALASA es el programa de Formación para la Salud, una iniciativa integral diseñada para que los estudiantes no solo estén sanos físicamente, sino que también tengan las herramientas para tomar decisiones responsables sobre su cuerpo y su vida.
-
-En las escuelas técnicas (como la DGETI), este programa se divide principalmente en dos pilares que mencionas en tu base de datos:
-
-
-</p>
+En las escuelas técnicas (como la DGETI), este programa se divide principalmente en dos pilares que mencionas en tu base de datos:</p>
+<img src="fomalasa.jpg" alt="platica">
                 <ul>
                     <li><strong>Consultorio Médico:</strong> Atención primaria y primeros auxilios. Es el primer contacto para la salud física. Se encarga de la atención de primeros auxilios, campañas de vacunación, detección de problemas visuales o auditivos y el seguimiento del seguro facultativo (IMSS).</li>
                     <li><strong>Consultorio Sexual-mente Responsable:</strong> Orientación profesional sobre salud reproductiva y prevención. Es un espacio de orientación (muchas veces psicológica y preventiva) sobre salud reproductiva. Aquí se tratan temas de prevención de embarazos no deseados, prevención de enfermedades de transmisión sexual (ITS) y el ejercicio de una sexualidad libre, informada y segura.</li>
@@ -246,10 +245,12 @@ En las escuelas técnicas (como la DGETI), este programa se divide principalment
             <div class="programa-card">
                 <h3>ECALE (Cine)</h3>
                 <p>El ECALE son las siglas de Educación con Calidad Lectora y Estética. Es un programa muy padre porque rompe con la idea de que en la escuela solo se viene a estudiar libros de texto; su objetivo es sensibilizarte a través del arte, específicamente el cine.</p>
+           <img src="cineeeeee.jpg" alt="el cine a la escuela">
             </div>
             <div class="programa-card">
                 <h3>AMA DGETI (Medio Ambiente)</h3>
                 <p>Acciones para el Medio Ambiente. Programa dedicado al cuidado del entorno, reforestación y cultura del reciclaje. El AMA DGETI es el programa de Acciones para el Medio Ambiente. Es la iniciativa "verde" de la institución, diseñada para que los estudiantes no solo aprendan teoría sobre ecología, sino que realicen acciones de impacto real en sus planteles y comunidades.</p>
+           <img src="natu.jpg" alt="medio ambiente saludable">
             </div>
         </section>
 
@@ -260,6 +261,7 @@ En las escuelas técnicas (como la DGETI), este programa se divide principalment
                 <h3>MEEMS</h3>
                 <p>Modelo de Emprendimiento de la Educación Media Superior. Impulsa tus ideas de negocio y proyectos innovadores. El MEEMS es el Modelo de Emprendimiento de la Educación Media Superior. Es el programa diseñado para que los estudiantes no solo se preparen para buscar un empleo, sino para que tengan la capacidad de crear sus propias empresas o proyectos innovadores.
 Es el espacio ideal para los alumnos con mentalidad de "tiburones" o inventores.</p>
+<img src="emprendimiento.jpg" alt="emprendimiento">
             </div>
             <div class="programa-card">
                 <h3>Oferta de Clubes</h3>
@@ -268,6 +270,8 @@ Es el espacio ideal para los alumnos con mentalidad de "tiburones" o inventores.
                     <li><strong>Deportivos:</strong> Fútbol, Básquetbol y Voleibol.</li>
                     <li><strong>Culturales:</strong> Danza, Música y Teatro.</li>
                     <li><strong>Ciencias:</strong> Robótica, Química y Matemáticas.</li>
+                    <img src="fut.jpg" alt="deporte y cultura">
+                    <img src="futebol.jpg" alt="deporte y cultura">
                 </ul>
             </div>
         </section>
