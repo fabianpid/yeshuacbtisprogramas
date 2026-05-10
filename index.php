@@ -228,7 +228,7 @@ img:hover {
     <header>
         <div class="logo-container">
             <!-- Reemplaza la URL por la ruta de tu logo real -->
-            <img src="cbtis.jpg" alt="Logotipo Institucional">
+            <img src="logocbtiano.jpg" alt="Logotipo Institucional">
         </div>
         <h1>Portal de Programas y Servicios Estudiantiles</h1>
     </header>
