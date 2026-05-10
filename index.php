@@ -187,6 +187,40 @@ tbody tr:last-of-type {
         overflow-x: auto;
     }
 }
+/* Contenedor general para las secciones de imágenes */
+.img-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+img {
+    /* Evita que la imagen sea más ancha que su contenedor */
+    max-width: 100%; 
+    /* Ajusta la altura automáticamente para no deformarla */
+    height: auto;
+    /* Define un tamaño máximo razonable para que no ocupen toda la pantalla */
+    width: 450px; 
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+    display: block;
+    margin: 10px auto;
+}
+
+/* Efecto visual al pasar el mouse */
+img:hover {
+    transform: scale(1.02);
+}
+
+/* Ajuste para celulares */
+@media (max-width: 600px) {
+    img {
+        width: 90%; /* En pantallas pequeñas ocupan casi todo el ancho */
+    }
+}
     </style>
 </head>
 <body>
