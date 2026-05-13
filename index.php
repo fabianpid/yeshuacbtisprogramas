@@ -32,196 +32,191 @@ if (!$resultado) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portal Institucional - Programas Estudiantiles</title>
     <style>
-        :root {
-            --primario: #800020; /* Color guinda institucional */
-            --secundario: #b8860b; /* Dorado */
-            --gris-claro: #f4f4f4;
-            --texto: #333;
-        }
+    :root {
+        /* Nueva paleta: Azul Océano y Verde Esmeralda */
+        --primario: #1a2a6c; 
+        --secundario: #00b09b; 
+        --fondo: #f8f9fa;
+        --blanco: #ffffff;
+        --texto: #2d3436;
+        --sombra: 0 10px 20px rgba(0,0,0,0.05);
+    }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            color: var(--texto);
-            background-color: #fff;
-        }
+    body {
+        font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        color: var(--texto);
+        background-color: var(--fondo);
+    }
 
-        /* --- HEADER --- */
-        header {
-            background-color: var(--primario);
-            color: white;
-            padding: 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            border-bottom: 4px solid var(--secundario);
-        }
+    /* --- HEADER MODERNO --- */
+    header {
+        background: linear-gradient(135deg, var(--primario), #b21f1f);
+        color: white;
+        padding: 3rem 1rem;
+        text-align: center;
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%); /* Corte diagonal abajo */
+    }
 
-        .logo-container img {
-            height: 80px; /* Ajustar según tu logo real */
-            background: white;
-            padding: 5px;
-            border-radius: 5px;
-        }
+    .logo-container img {
+        height: 100px;
+        filter: drop-shadow(0 5px 15px rgba(0,0,0,0.2));
+        transition: transform 0.4s ease;
+    }
 
-        /* --- NAV --- */
-        nav {
-            background-color: #333;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+    /* --- NAVEGACIÓN ESTILO FLOATING --- */
+    nav {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        margin: -20px auto 20px;
+        width: 90%;
+        max-width: 800px;
+        border-radius: 50px;
+        box-shadow: var(--sombra);
+        position: sticky;
+        top: 10px;
+        z-index: 1000;
+    }
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            margin: 0;
-            padding: 0;
-        }
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        padding: 0.5rem;
+    }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 1rem 1.5rem;
-            display: block;
-            transition: background 0.3s;
-        }
+    nav a {
+        color: var(--primario);
+        font-weight: 600;
+        text-decoration: none;
+        padding: 0.8rem 1.2rem;
+        border-radius: 25px;
+        transition: 0.3s;
+    }
 
-        nav a:hover {
-            background-color: var(--secundario);
-        }
+    nav a:hover {
+        background-color: var(--primario);
+        color: white;
+    }
 
-        /* --- CONTENIDO --- */
-        main {
-            max-width: 1000px;
-            margin: auto;
-            padding: 2rem;
-        }
+    /* --- MAIN Y GRID DE TARJETAS --- */
+    main {
+        max-width: 1200px;
+        margin: auto;
+        padding: 2rem;
+    }
 
-        section {
-            margin-bottom: 3rem;
-            padding-top: 60px; /* Compensar el nav fixed */
-            text-align=justify;
-        }
+    section {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        margin-bottom: 4rem;
+    }
 
-        h2 {
-            color: var(--primario);
-            border-bottom: 2px solid var(--secundario);
-            display: inline-block;
-        }
+    h2 {
+        grid-column: 1 / -1; /* Ocupa todo el ancho */
+        color: var(--primario);
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 1.5rem;
+        position: relative;
+    }
 
-        .programa-card {
-            background: var(--gris-claro);
-            padding: 1.5rem;
-            margin: 1rem 0;
-            border-left: 5px solid var(--primario);
-            border-radius: 4px;
-        }
-
-        /* --- FOOTER --- */
-        footer {
-            background-color: #222;
-            color: white;
-            text-align: center;
-            padding: 2rem 1rem;
-            margin-top: 3rem;
-        }
-
-        .social-links a {
-            color: var(--secundario);
-            margin: 0 10px;
-            text-decoration: none;
-        }
-        /* --- ESTILOS PARA LA TABLA --- */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-    font-size: 18px;
-    text-align: left;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    border-radius: 8px;
-    overflow: hidden; /* Para que las esquinas redondeadas funcionen */
-}
-
-thead tr {
-    background-color: var(--primario); /* El color guinda #800020 */
-    color: #ffffff;
-    text-align: left;
-    font-weight: bold;
-}
-
-th, td {
-    padding: 12px 15px;
-    border-bottom: 1px solid #dddddd;
-}
-
-/* Color dorado para los encabezados al pasar el mouse */
-th {
-    border-bottom: 3px solid var(--secundario); /* El dorado #b8860b */
-}
-
-/* Efecto cebra: filas pares con un gris muy clarito */
-tbody tr:nth-of-type(even) {
-    background-color: var(--gris-claro);
-}
-
-/* Efecto hover: resaltar la fila cuando pasas el ratón */
-tbody tr:hover {
-    background-color: #f1f1f1;
-    transition: 0.3s;
-}
-
-/* Estilo para la última fila para que se vea más limpio */
-tbody tr:last-of-type {
-    border-bottom: 2px solid var(--primario);
-}
-
-/* Responsividad: si la pantalla es pequeña, permite scroll horizontal */
-@media (max-width: 600px) {
-    table {
+    h2::after {
+        content: '';
         display: block;
-        overflow-x: auto;
+        width: 60px;
+        height: 4px;
+        background: var(--secundario);
+        margin: 10px auto;
     }
-}
-/* Contenedor general para las secciones de imágenes */
-.img-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    padding: 20px;
-}
 
-img {
-    /* Evita que la imagen sea más ancha que su contenedor */
-    max-width: 100%; 
-    /* Ajusta la altura automáticamente para no deformarla */
-    height: auto;
-    /* Define un tamaño máximo razonable para que no ocupen toda la pantalla */
-    width: 450px; 
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    transition: transform 0.3s ease;
-    display: block;
-    margin: 10px auto;
-}
+    .programa-card {
+        background: var(--blanco);
+        padding: 2rem;
+        border-radius: 20px;
+        box-shadow: var(--sombra);
+        border: none; /* Quitamos el borde izquierdo grueso */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        display: flex;
+        flex-direction: column;
+    }
 
-/* Efecto visual al pasar el mouse */
-img:hover {
-    transform: scale(1.02);
-}
+    .programa-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    }
 
-/* Ajuste para celulares */
-@media (max-width: 600px) {
+    .programa-card h3 {
+        color: var(--secundario);
+        margin-top: 0;
+    }
+
+    /* --- TABLA REDISEÑADA --- */
+    table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0 10px; /* Espacio entre filas */
+        background: transparent;
+        box-shadow: none;
+    }
+
+    thead tr {
+        background-color: transparent;
+        color: var(--primario);
+    }
+
+    th {
+        padding: 15px;
+        border: none;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        letter-spacing: 1px;
+    }
+
+    tbody tr {
+        background-color: var(--blanco);
+        box-shadow: var(--sombra);
+        border-radius: 15px;
+    }
+
+    td {
+        padding: 20px;
+        border: none;
+    }
+
+    td:first-child { border-radius: 15px 0 0 15px; }
+    td:last-child { border-radius: 0 15px 15px 0; }
+
+    /* --- IMÁGENES --- */
     img {
-        width: 90%; /* En pantallas pequeñas ocupan casi todo el ancho */
+        width: 100%;
+        height: 200px;
+        object-fit: cover; /* Recorta la imagen para que todas midan lo mismo */
+        border-radius: 15px;
+        margin: 15px 0;
     }
-}
-    </style>
+
+    /* --- FOOTER OSCURO --- */
+    footer {
+        background: #111;
+        color: #888;
+        padding: 4rem 1rem;
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
+    }
+
+    .btn-submit {
+        background: linear-gradient(to right, var(--primario), var(--secundario));
+        color: white;
+        border: none;
+        padding: 12px 30px;
+        border-radius: 25px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+</style>
 </head>
 <body>
 
